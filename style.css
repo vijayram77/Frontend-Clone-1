@@ -1,0 +1,814 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    color: #fff
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+#page1 {
+    width: 100%;
+    height: auto;
+    background-color: #333;
+    position: relative;
+}
+
+.hor {
+    position: relative;
+}
+
+#page1 img {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+#nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color: #00000073;
+    gap: 2vmax;
+    padding: 5px;
+    z-index: 999;
+    /* overflow-x: hidden; */
+}
+
+.menuside {
+    position: absolute;
+    padding: 50px;
+    background: #fff;
+    border-radius: 15px;
+    z-index: 999;
+    right: -100%;
+    display: none;
+    flex-direction: column;
+    gap: 2.3vw;
+}
+
+.menuside p {
+    color: black;
+}
+
+#nav img {
+    height: 50px;
+}
+
+#nav .atags {
+    display: flex;
+    gap: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav .atags a {
+    padding: 1.2vw 0;
+    border-bottom: 3px solid transparent;
+}
+
+#nav .atags a:hover {
+    border-bottom: 3px solid crimson;
+}
+
+.menu {
+    position: absolute;
+    right: 40px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    height: 100%;
+    top: 10px;
+    width: fit-content;
+    height: fit-content;
+
+
+}
+
+.menu i {
+    color: #fff;
+    z-index: 999;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+@media screen and (max-width:768px) {
+    #nav .atags {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+}
+
+#page2 {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    padding: 40px 6vmax;
+}
+
+#page2 .head {
+    display: flex;
+    justify-content: center;
+    gap: 0.5vmax;
+}
+
+#page2 .head h1:first-child {
+    color: black;
+}
+
+#page2 .head h1 {
+    font-size: 2.5vmax;
+}
+
+#page2 .head h1:last-child {
+    color: rgb(228, 46, 82);
+}
+
+.categ {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.categ a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 30px;
+    border: 2px solid crimson;
+}
+
+.categ a:hover {
+    color: #fff;
+    background-color: crimson;
+}
+
+#page2 p {
+    text-align: center;
+    color: #666;
+}
+
+.horipar {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    z-index: 10;
+}
+
+.horizontalscroll {
+    padding: 40px 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10vw;
+}
+
+.horizontalscroll .card {
+    width: fit-content;
+    transition: 0.4s ease-out;
+
+}
+
+.horipar img {
+    width: 320px;
+}
+
+.card:hover {
+    transform: scale(102%);
+}
+
+.horizontalscroll .card h1 {
+    color: black;
+    text-align: center;
+}
+
+.leftarr,
+.rightarr {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftarr {
+    left: 30%;
+    top: 50%;
+    transform: translate(-30%, -50%);
+}
+
+.rightarr {
+    right: 30%;
+    top: 50%;
+    transform: translate(-30%, -50%);
+}
+
+@media (max-width:1440px) {
+    .horipar {
+        display: none;
+    }
+}
+
+#page3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #555;
+}
+
+#page3>h1 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+
+#page3>h1::after {
+    content: " Flagship Products";
+    color: rgb(255, 61, 100);
+}
+
+.scroller {
+    position: relative;
+    padding: 5vmax 10vmax;
+    background-color: whitesmoke;
+    overflow: hidden;
+    margin: 5vmax;
+}
+
+.scroller img {
+    height: 5vh;
+    position: absolute;
+    animation: s 10s ease-out infinite;
+}
+
+@keyframes s {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -30%;
+    }
+}
+
+.sss {
+    width: 80%;
+    margin: 40px auto;
+    background-color: #333;
+    min-height: 20vh;
+    border-radius: 20px;
+    padding: 30px 0;
+
+}
+
+.hhhh {
+
+    width: 80%;
+    margin: 40px auto;
+    border-radius: 15px;
+    padding: 5 15px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.sss .hhhh a {
+    color: #fff;
+    text-decoration: none;
+    width: 25%;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+    z-index: 10;
+}
+
+.sss i {
+    display: none;
+    color: #fff;
+    width: 25%;
+    z-index: 10;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+@media (max-width:320px) {
+    .sss a {
+        display: none;
+    }
+
+    .sss i {
+        display: inline-block;
+    }
+}
+
+.crimson {
+    width: 25%;
+    border-radius: 25px;
+    height: 100%;
+    position: absolute;
+    background-color: crimson;
+    z-index: 9;
+    left: 25%;
+    border: 1px solid crimson;
+    transition: 0.4s ease-out;
+}
+
+.hhhh a:hover .crimson {
+    left: 0%;
+}
+
+.matter {
+    padding: 30px;
+}
+
+.matter h1 {
+    color: rgb(255, 0, 51);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.bookdiv {
+    padding: 4vmax;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #fff;
+    min-height: 20vh;
+}
+
+.bookdiv div {
+    width: 280px;
+}
+
+.bookdiv .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookdiv .image img {
+    width: 320px;
+}
+
+.bookdiv p,
+h1 {
+    color: black;
+}
+
+.bookinfo h1::after {
+    content: " Our Latest Collection";
+    color: crimson;
+}
+
+.bookinfo .bookbtn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+
+}
+
+.bookinfo .bookbtn button {
+    padding: 12px 16px;
+    border-radius: 15px;
+    background-color: crimson;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+}
+
+.download {
+    border: none;
+    margin-top: 30px;
+    position: relative;
+}
+
+.download button {
+    padding: 15px 40px;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+    border: 2px solid crimson;
+    outline: none;
+}
+
+.download i {
+    color: black;
+}
+
+.down {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    background-color: #000;
+    text-align: center;
+    border-radius: 25px;
+    transition: 0.4s ease-out;
+    display: none;
+    overflow: hidden;
+}
+
+.down p {
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.down p:hover {
+    background-color: crimson;
+}
+
+.download:hover .down {
+    display: block;
+}
+
+.footer {
+    padding: 6vw 15vw;
+    background-color: #222;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer .det {
+    width: 300px;
+}
+
+.footer img {
+    width: 250px;
+}
+
+.det {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.det i {
+    font-size: 32px;
+}
+
+.git {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+}
+
+#page1 h1 {
+    font-size: 52px;
+}
+
+button,
+i,
+a {
+    cursor: pointer;
+}
+
+.products {
+    background: #444;
+    padding: 10px 10px;
+    width: 100%;
+    min-height: 80vh;
+    display: none;
+}
+
+.products .filters i {
+    color: #fff;
+}
+
+.filters {
+    width: 25%;
+    min-height: 40vh;
+    border-right: 1px solid gray;
+}
+
+.filters h1 {
+    text-align: center;
+    color: whitesmoke;
+}
+
+.list {
+    background-color: #444;
+    height: 100vh;
+    width: 100%;
+}
+
+.search {
+    margin: 40px 10px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 90%;
+    padding: 12px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.search i {
+    color: rgb(255, 0, 51);
+    font-size: 1.5vw;
+}
+
+.search input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 80%;
+}
+
+details {
+    padding: 7px;
+}
+
+summary {
+    list-style: none;
+}
+
+summary .sum {
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.under {
+    margin: 5px;
+    height: 2px;
+    background-color: gray;
+
+}
+
+.under .color {
+    width: 40%;
+    height: 100%;
+    background-color: crimson;
+}
+
+input[type="radio"] {
+    accent-color: crimson;
+}
+
+.detail {
+    padding: 0 5px;
+    display: flex;
+    gap: 7px;
+}
+
+.btns {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3vw 4vw;
+    gap: 2vw;
+    border-bottom: 1px solid gray;
+}
+
+.btns button {
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: #000;
+}
+
+.btns button:first-child {
+    background-color: rgb(255, 0, 51);
+}
+
+.btns .filter {
+    background-color: whitesmoke;
+    color: #111;
+    font-weight: bold;
+    width: fit-content;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.btns .filter p,
+i {
+    color: #111;
+}
+
+.scrolling {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: auto;
+    height: 100%;
+    padding: 20px;
+    background-color: #444;
+}
+
+.scrolling::-webkit-scrollbar {
+    display: none;
+}
+
+.cards {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    background-color: #333;
+    border: 1px solid #ffffff44;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.cards:hover {
+    box-shadow: 0 0 10px #777;
+    transition: 0.1s ease-in;
+}
+
+.img:hover img {
+    transform: rotatez(360deg);
+    transition: 0.7s ease-in;
+}
+
+.bar {
+    position: absolute;
+    width: 5px;
+    height: 20%;
+    background-color: rgb(105, 103, 103);
+    border-radius: 5px;
+    left: 0;
+    top: 10%;
+}
+
+.bar:hover {
+    transform: scale(150%);
+    transition: 0.4s ease-in;
+}
+
+.img {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img {
+    width: 100%;
+}
+
+.det {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.det p {
+    color: crimson;
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.btn button {
+    padding: 10px;
+    width: 80%;
+    outline: none;
+    border: 1px solid rgba(245, 245, 245, 0.358);
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.btn button:hover {
+    background-color: #777;
+    transition: .1s ease-in;
+}
+
+.list .search {
+    display: none;
+}
+
+@media (max-width:1150px) {
+    .filters {
+        display: none;
+    }
+
+    .list .search {
+        display: inline-block;
+    }
+
+    .btns .filter {
+        display: flex;
+    }
+}
+
+.list i {
+    font-size: 25px;
+}
+
+#page1 h1 {
+    position: absolute;
+    top: 25vw;
+    left: 7vw;
+    z-index: 10;
+    color: white;
+    font-size: 6vw;
+}
+
+.bookdiv h1 {
+    font-size: 24px;
+}
+
+.parent {
+    position: relative;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.box {
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    background: rgb(159, 156, 156);
+}
+
+.box h2 {
+    font-size: 4vw;
+}
+
+.box p {
+    font-size: 2vmax;
+}
+
+.box img {
+    width: 30vw;
+}
+
+.heading {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
+
+@media (max-width:1024px) {
+    .parent {
+        display: none;
+    }
+}
